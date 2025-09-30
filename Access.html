@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMAS</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #ffffff;
+      color: #333;
+    }
+    header {
+      background: #e8eaf6;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+  color: #007bff;
+}
+
+.btn {
+      background: #001f54;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .content {
+      padding: 40px;
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 400px;
+    }
+
+    .card {
+      background-color: #e9eaf9;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: 0 auto 30px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .newsletter {
+      background-color: #e9eaf9;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    .newsletter h2 {
+      color: #0073e6;
+      margin-bottom: 10px;
+    }
+
+    .newsletter p {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 10px 15px;
+      background-color: #001a4d;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: #003380;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">OMAS 🩺</div>
+    <nav>
+      <a href="../New folder/Home.html">Home</a>
+      <a href="../New folder/doctor2.html">Doctors</a>
+      <a href="../New folder/Appointments.html">Appointments</a>
+      <a href="../New folder/Access.html">Contact</a>
+      <a href="../New folder/Login.html" class="btn">Login</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="24/7" width="50" />
+      <h3>24/7 Access</h3>
+      <p>Book or manage appointments anytime without a seamless system</p>
+    </div>
+
+    <div class="newsletter">
+      <h2>Stay in the Loop</h2>
+      <p>Subscribe to our newsletter for the latest health tips, updates, and special offers.</p>
+      <input type="email" id="email" placeholder="Enter your email" />
+      <button onclick="subscribe()">Subscribe</button>
+    </div>
+  </div>
+
+  <script>
+    function subscribe() {
+      const email = document.getElementById("email").value;
+      if (email === "") {
+        alert("Please enter a valid email address.");
+      } else {
+        alert("Thanks for subscribing, " + email + "!");
+        document.getElementById("email").value = "";
+      }
+    }
+  </script>
+<!-- Footer -->
+<footer style="background-color: #000000; color: white; padding: 50px 0; text-align: right; margin-dow: 50px;">
+  <div style="max-width: 1200px; margin: auto;">
+    <p style="margin: 5px 0;">&copy; 2025 OMAS. جميع الحقوق محفوظة.</p>
+    <p style="margin: 5px 0;">1:George Assem 2301325</p>
+    <p style="margin: 5px 0;">2:Marwan Montaser 2301343</p>
+    <p style="margin: 5px 0;">3:Kerlos Hany 2301317</p>
+    <p style="margin: 5px 0;">4:Mahmood Abdelbaset 2301324</p>
+    <p style="margin: 5px 0;">5:Ziad Ashraf 2301331</p>
+    <p style="margin: 5px 0;">6:Mohamed Hamdy 2301344</p>
+    <p style="margin: 5px 0;">زوروا صفحاتنا على:</p>
+    
+    <div style="margin-top: 15px;">
+      <a href="https://facebook.com" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" style="vertical-align: middle;">
+      </a>
+      <a href="https://twitter.com" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" style="vertical-align: middle;">
+      </a>
+      <a href="https://instagram.com" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram" style="vertical-align: middle;">
+      </a>
+      <a href="https://youtube.com" target="_blank" style="margin: 0 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" alt="YouTube" style="vertical-align: middle;">
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments - OMAS</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f0f2f5;
+      color: #333;
+    }
+    header {
+      background: #e8eaf6;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+  color: #007bff;
+}
+
+    .btn {
+      background: #001f54;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .container {
+      padding: 40px;
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #e9eaf9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #0073e6;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #001a4d;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003380;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">OMAS 🩺</div>
+        <nav>
+          <a href="../New folder/Home.html">Home</a>
+          <a href="../New folder/doctor2.html">Doctors</a>
+          <a href="../New folder/Appointments.html">Appointments</a>
+          <a href="../New folder/Access.html">Contact</a>
+          <a href="../New folder/Login.html" class="btn">Login</a>
+        </nav>
+      </header>
+  <div class="container">
+    <h2>Book an Appointment</h2>
+    <form id="appointmentForm">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required />
+
+      <label for="doctor">Select Doctor</label>
+      <select id="doctor" required>
+        <option value="">-- Choose a Doctor --</option>
+        <option value="Dr. Sarah Johnson">Dr. Sarah Johnson</option>
+        <option value="Dr. Ahmed Karim">Dr. Ahmed Karim</option>
+        <option value="Dr. Lisa Wang">Dr. Lisa Wang</option>
+        <option value="Dr. John Smith">Dr. John Smith</option>
+      </select>
+
+      <label for="date">Appointment Date</label>
+      <input type="date" id="date" required />
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" rows="4" placeholder="Optional..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("fullname").value;
+      alert("Thank you, " + name + "! Your appointment has been submitted.");
+      
+      this.reset(); // clear form
+    });
+  </script>
+
+</body>
+</html>

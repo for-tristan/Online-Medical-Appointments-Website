@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 10px solid black;
+    }
+
+    .signup-container {
+      border: 3px solid black;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 0 10px #000;
+      width: 600px;
+      position: relative;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      width: 95%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .name-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .name-container input {
+      width: 100%;
+    }
+
+    .password-container {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .gender-dob {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .gender-section,
+    .dob-section {
+      width: 48%;
+    }
+
+    .gender-section label,
+    .dob-section label {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .social-login {
+      margin-top: 20px;
+    }
+
+    .social-login img {
+      width: 40px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 15px;
+    }
+
+    .footer a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    hr {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-container">
+    
+    <h2>Sign up</h2>
+
+    <form>
+      <div class="name-container">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+      </div>
+
+      <input type="email" placeholder="E-mail" required>
+
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <div class="gender-dob">
+        <div class="gender-section">
+          <label>Gender</label>
+          <label><input type="radio" name="gender"> male</label>
+          <label><input type="radio" name="gender"> female</label>
+          <label><input type="radio" name="gender"> prefer not to say</label>
+        </div>
+
+        <div class="dob-section">
+          <label>Date of Birth</label>
+          <input type="text" placeholder="day" style="width: 30%;">
+          <input type="text" placeholder="month" style="width: 30%;">
+          <input type="text" placeholder="year" style="width: 35%;">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="social-login">
+        <p>or sign up with</p>
+        <img src="https://imgs.search.brave.com/ZyNDsok-KqN5jBJ5XqiFz-Ja9ltWWIzEKh_m1aWyc-M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly8xMDAw/bG9nb3MubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE2LzEx/L05ldy1Hb29nbGUt/TG9nby00OTd4NTAw/LmpwZw" alt="Google">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+      </div>
+
+      <div class="footer">
+        Have an account? <a href="../New folder/Login.html">Login</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>

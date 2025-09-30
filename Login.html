@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      border: 10px solid black;
+    }
+
+    .login-container {
+      text-align: center;
+      border: 3px solid black;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .login-container h2 {
+      margin-bottom: 30px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .password-container {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .social-login {
+      margin: 20px 0;
+    }
+
+    .social-login img {
+      width: 40px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 20px;
+    }
+
+    .footer a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  
+
+  <div class="login-container">
+    <h2>Login</h2>
+
+    <form>
+      <input type="email" placeholder="E-mail" required>
+
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <div class="social-login">
+        
+        <p>or login with</p>
+        <img src="https://imgs.search.brave.com/ZyNDsok-KqN5jBJ5XqiFz-Ja9ltWWIzEKh_m1aWyc-M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly8xMDAw/bG9nb3MubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE2LzEx/L05ldy1Hb29nbGUt/TG9nby00OTd4NTAw/LmpwZw" alt="Google">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+      </div>
+
+      <div class="footer">
+
+        Don't have an account? <a href="../New folder/Sign up.html">Sign up</a>
+
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMAS - Book Doctors</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f0f2f5;
+      color: #333;
+    }
+    header {
+      background: #e8eaf6;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+  color: #007bff;
+}
+
+    .btn {
+      background: #001f54;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .verified, .reviews {
+      background: #e6e9f8;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .choose {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    #searchInput {
+      padding: 0.5rem;
+      width: 60%;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .doctor-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .card {
+      width: 200px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .testimonials {
+      background: #e9ecfc;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .testimonial-box {
+      background: #fff;
+      border-left: 4px solid #001f54;
+      padding: 1rem;
+      margin-top: 0.5rem;
+    }
+
+  
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">OMAS 🩺</div>
+    <nav>
+      <a href="../New folder/Home.html">Home</a>
+      <a href="../New folder/doctor2.html">Doctors</a>
+      <a href="../New folder/Appointments.html">Appointments</a>
+      <a href="../New folder/Access.html">Contact</a>
+      <a href="../New folder/Login.html" class="btn">Login</a>
+    </nav>
+  </header>
+
+  <section class="verified">
+    <h3>Verified Doctors</h3>
+    <p>All doctors on our platform are licensed and verified by our team</p>
+  </section>
+
+  <section class="choose">
+    <h2>Choose a Doctor</h2>
+    <input type="text" id="searchInput" placeholder="Search doctor by name..." />
+    <div class="doctor-cards" id="doctorList"></div>
+  </section>
+
+  <section class="reviews">
+    <h3>Patient Reviews</h3>
+    <p>Read reviews from other patients to make informed decisions</p>
+  </section>
+
+  <section class="testimonials">
+    <h3>Testimonials</h3>
+    <div class="testimonial-box">
+      <p id="testimonialText">"Great service!"</p>
+    </div>
+  </section>
+
+  <script>
+    const doctors = [
+      { name: "Dr. Sarah Johnson", img: "https://randomuser.me/api/portraits/women/44.jpg" },
+      { name: "Dr. Ahmed Karim", img: "https://randomuser.me/api/portraits/men/65.jpg" },
+      { name: "Dr. Lisa Wang", img: "https://randomuser.me/api/portraits/women/68.jpg" },
+      { name: "Dr. John Smith", img: "https://randomuser.me/api/portraits/men/51.jpg" }
+    ];
+
+    function renderDoctors(list) {
+      const container = document.getElementById("doctorList");
+      container.innerHTML = "";
+      list.forEach(doctor => {
+        container.innerHTML += `
+          <div class="card">
+            <img src="${doctor.img}" alt="${doctor.name}" />
+            <h4>${doctor.name}</h4>
+            <nav><br>
+      <a href="../New folder/Appointments.html" class="btn">Appointement</a> 
+    </nav><br>
+          </div>
+        `;
+      });
+    }
+
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filtered = doctors.filter(doc => doc.name.toLowerCase().includes(keyword));
+      renderDoctors(filtered);
+    });
+
+    renderDoctors(doctors);
+
+    const testimonials = [
+      '"Great service!"',
+      '"Very professional doctors."',
+      '"Easy to book and manage appointments."',
+      '"Highly recommended!"',
+      '"عاش ا رجالة"',
+      '"انا بهير نفسي انبهرت"',
+      '"حقيقي برافو"',
+      '"جامد"',
+     
+    ];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById("testimonialText").textContent = testimonials[i];
+      i = (i + 1) % testimonials.length;
+    }, 3000);
+
+    const modal = document.getElementById("loginModal");
+    document.getElementById("loginBtn").onclick = () => modal.style.display = "flex";
+    document.getElementById("closeLogin").onclick = () => modal.style.display = "none";
+    window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+  </script>
+</body>
+</html>
