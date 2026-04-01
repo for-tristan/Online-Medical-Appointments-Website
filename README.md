@@ -20,7 +20,7 @@ git clone https://github.com/for-tristan/Online-Medical-Appointments-Website
     
 ## Feedback
 
-If you have any feedback, please reach out to us at tristan20us@gmail.com
+If you have any feedback, please reach out to me at tristan20us@gmail.com
 
 
 ## Authors
