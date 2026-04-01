@@ -29,3 +29,7 @@ git clone https://github.com/for-tristan/Online-Medical-Appointments-Website
 
 If you have any feedback, please reach out to me at tristan20us@gmail.com
 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
